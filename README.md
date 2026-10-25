@@ -48,6 +48,27 @@ $ python3 zaliz.py лес
   Предложный     ле́се, в лесу́   леса́х
 ```
 
+## Сайт
+
+Та же программа в виде веб-страницы для GitHub Pages: поле ввода (можно
+несколько слов), под ним — таблицы форм с подсветкой введённой формы.
+
+* `site/` — страница (`index.html`, `app.js`, `style.css`);
+* `build_site.py` — раскладывает словарь на ~4000 небольших JSON-файлов по
+  первым трём буквам словоформы, страница загружает только нужный;
+* `.github/workflows/pages.yml` — при каждом push собирает сайт и публикует
+  его на GitHub Pages.
+
+Чтобы включить публикацию: **Settings → Pages → Build and deployment →
+Source: GitHub Actions**, затем перезапустить workflow (вкладка Actions).
+
+Проверить локально:
+
+```sh
+python3 build_site.py _site
+python3 -m http.server -d _site 8000   # http://localhost:8000
+```
+
 ## Тесты
 
 ```sh

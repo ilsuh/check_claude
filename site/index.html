@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Формы слов по Зализняку</title>
+<meta name="description" content="Все формы русского слова по «Грамматическому словарю» А. А. Зализняка">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Формы слов</h1>
+  <p class="sub">по «Грамматическому словарю русского языка» А. А. Зализняка</p>
+  <form id="search" autocomplete="off">
+    <input id="q" type="search" placeholder="Например: стол, идти, шёл" autofocus
+           aria-label="Слова через пробел или запятую">
+    <button type="submit">Показать</button>
+  </form>
+  <label class="opt"><input id="plain" type="checkbox"> без ударений</label>
+  <p class="hint">Можно вводить несколько слов и любые их формы: «столами» найдёт «стол».</p>
+</header>
+<main id="out"></main>
+<footer>
+  Данные: <a href="https://github.com/jurta/nlp-rus-zaliz">jurta/nlp-rus-zaliz</a> (GNU GPL).
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
